@@ -10,7 +10,8 @@ class Die():
         self.rolls = 0
         self.die_count = 0
         self.dice_title = ""
-        
+      
+    
     def roll(self):
         """ resturn a random value between 1 and number of sides"""
         return randint(1, self.num_sides)
@@ -27,6 +28,7 @@ class Die():
             sum_sides += 0
         return sum_sides
     
+    
     def record_rolls(self, die_list, rolls):
         """ rolls dice and add results to a list """ 
         die_roll = []
@@ -37,8 +39,8 @@ class Die():
             for die in die_list:
                 die_total += die.roll()
             die_roll.append(die_total)
-        
         return die_roll
+    
     
     def count_rolls(self, die_count ,die_roll, result_list):
         """ counts every number rolled and records the number into a list """ 
@@ -69,12 +71,3 @@ class Die():
         title = "The Results of Rolling " + dice + ", "  + str(self.rolls) + " times."
         self.dice_title = dice 
         return title
-     
-     
-        
-        
-    
-    
-        
-        
-                
